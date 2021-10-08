@@ -73,10 +73,15 @@ It should not return any errors.
 
 
     i. ```kubectl apply -f deployment/db-configmap.yaml``` - Set up environment variables for the pods
+    
     ii. ```kubectl apply -f deployment/db-secret.yaml``` - Set up secrets for the pods
+    
     iii. ```kubectl apply -f deployment/postgres.yaml``` - Set up a Postgres database running PostGIS
+    
     iv. ```kubectl apply -f deployment/udaconnect-api.yaml``` - Set up the service and deployment for the API
+    
     v. ```kubectl apply -f deployment/udaconnect-app.yaml``` - Set up the service and deployment for the web app
+    
     vi. ```sh scripts/run_db_command.sh <POD_NAME>``` - Seed your database against the postgres pod. (kubectl get pods will give you the POD_NAME)
 
 Manually applying each of the individual yaml files is cumbersome, but going through each step provides some context on the starter project's content. In practice, we can reduce the number of steps by running the command against a directory to apply all of the contents:
