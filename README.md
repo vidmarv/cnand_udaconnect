@@ -56,6 +56,8 @@ users:
 Copy the content and type exit to exit the virtual OS. You will find yourself back in your computer's session.
 
 Retrieve the Kubernetes config file", add "A useful article on how to manage kubeconfig files can be found here.
+https://community.suse.com/posts/cluster-this-is-your-admin-do-you-read 
+
 
 4. Configure kubectl
 
@@ -64,9 +66,9 @@ Create the file ~/.kube/config (or replace it if it already exists).
 Paste the contents of the k3s.yaml output into the config file.
 
 Test that kubectl works by running the command
-
+```
 kubectl describe services
-
+```
 It should not return any errors.
 
 5. Deploy kubectl
